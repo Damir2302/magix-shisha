@@ -276,6 +276,12 @@ body.menu-layer {
     bottom: 0;
     width: 320px;
     height: 130px;
+
+    @include breakpoint(lg) {
+        position: initial;
+        width: unset;
+        height: unset;
+    }
 }
 
 .aside__btn-showmore {
