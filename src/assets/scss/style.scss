@@ -1,0 +1,167 @@
+@import 'base/normalize';
+@import 'base/mixins';
+@import 'base/fonts';
+@import 'base/fontawesome';
+@import 'base/reset';
+@import 'base/ui';
+
+@import 'plugins/swiper-bundle';
+@import 'plugins/jquery-ui.min';
+
+@import 'includes/header';
+@import 'includes/footer';
+
+@import 'components/catalog';
+@import 'components/popup';
+@import 'components/breadcrumbs';
+@import 'components/pagination';
+
+@import 'pages/blog';
+@import 'pages/blog-detail';
+@import 'pages/homepage';
+@import 'pages/item';
+@import 'pages/cart';
+@import 'pages/catalog';
+
+@import 'pages/about';
+@import 'pages/contacts';
+@import 'pages/delivery';
+@import 'pages/wholesalers';
+@import 'pages/payment';
+@import 'pages/return';
+
+
+//////////////////////////////
+/// RESTYLES
+//////////////////////////////
+
+.page__title {
+    margin: 20px 0;
+    color: #222222;
+    font-size: 24px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 30px;
+    text-align: left;
+    text-transform: uppercase;
+
+    @include breakpoint(sm) {
+        margin: 0 0 20px;
+    }
+
+    @include breakpoint(lg) {
+        margin: 0 0 30px;
+        font-size: 36px;
+    }
+
+}
+
+.content__title {
+    color: #222222;
+    font-size: 24px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 30px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+    @include breakpointMax(lg) {
+        margin-bottom: 20px;
+    }
+
+}
+
+.content__list {
+    margin-bottom: 56px;
+    color: #888888;
+    @include breakpointMax(lg) {
+        margin-bottom: 30px;
+    }
+}
+
+.content__list p {
+    margin-bottom: 0;
+    font-size: 16px;
+
+}
+
+.content--strong {
+    color: #888888;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: left;
+    color: #222222;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    margin-bottom: 27px;
+}
+
+
+.btn__back {
+    color: $green;
+    padding: 18px 40px 18px 16px;
+    box-sizing: border-box;
+    border: 1px solid $green;
+    width: fit-content;
+    text-transform: uppercase;
+}
+
+.btn__back i {
+    margin-right: 20px;
+}
+
+.content__ol {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    counter-reset: num;
+}
+
+.content__ol li {
+    padding: 0 0 10px 70px;
+    position: relative;
+    counter-increment: num;
+    color: #888888;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 30px;
+    text-align: left;
+}
+
+.content__ol li::before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    background: $green;
+    width: 28px;
+    height: 34px;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 30px;
+    text-align: left;
+    content: counter(num);
+    color: #fff;
+}
+
+.content-paragraph {
+    color: #888888;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 27px;
+    text-align: left;
+    margin-bottom: 26px;
+}

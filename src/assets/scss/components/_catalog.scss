@@ -1,0 +1,246 @@
+.cat-items__pagination {
+    display: none;
+
+    @include breakpoint(lg) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 250px;
+    }
+}
+
+.swiper-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80px;
+}
+
+.swiper-button {
+
+    @include breakpoint(lg) {
+        all: unset;
+        background: $green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        text-align: center;
+        color: #fff;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+}
+
+.swiper-button:hover {
+    background: #fff;
+    color: #000;
+    border: 1px solid $green;
+}
+
+.swiper-button::after {
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.slides-number {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.slides-number > .s-progress {
+    margin: 0 10px;
+    background: #989898;
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 1px;
+}
+
+.slides-number > .s-progress > span {
+    content: '';
+    background: $green;
+    position: absolute;
+    top: -1px;
+    display: inline-block;
+    height: 3px;
+    transition: all .3s ease;
+}
+
+.cat-items {
+    position: relative;
+}
+
+.cat-items__container {
+    max-height: 715px;
+
+    @include breakpoint(md) {
+        max-height: 1000px;
+    }
+
+    @include breakpoint(lg) {
+        max-height: 1400px;
+    }
+}
+
+.item__block {
+    padding: 15px;
+    background: #fff;
+    position: relative;
+    max-height: 350px;
+    box-sizing: border-box;
+
+    @include breakpoint(md) {
+        max-height: 100%;
+    }
+
+    @include breakpoint(xl) {
+        padding: 30px 15px 40px;
+    }
+}
+
+.add-to-favorite {
+    background: none;
+    position: absolute;
+    right: 15px;
+    display: block;
+    font-size: 18px;
+    color: #e3e5eb;
+
+    @include breakpoint(xl) {
+        right: 30px;
+        font-size: 24px;
+    }
+}
+
+.add-to-favorite.added i::before {
+    font-weight: 700;
+    color: #555;
+}
+
+.item__image {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 140px;
+
+    @include breakpoint(md) {
+        height: 220px;
+    }
+}
+
+.item__desc {
+    margin-top: 10px;
+    line-height: 18px;
+    color: #414548;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.item__price {
+
+    @include breakpoint(lg) {
+        margin-left: 15px;
+        text-align: left;
+    }
+}
+
+.item__price-new {
+    font-size: 13px;
+
+    @include breakpoint(xl) {
+        font-size: 16px;
+    }
+}
+
+.item__price-old {
+    margin-left: 10px;
+    font-size: 11px;
+    color: #a8a8a8;
+    text-decoration: line-through;
+
+    @include breakpoint(xl) {
+        font-size: 14px;
+    }
+}
+
+.item__wrap {
+    margin-top: 10px;
+
+    @include breakpoint(xl) {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.item__title {
+    height: 36px;
+    font-size: 12px;
+    line-height: 18px;
+    overflow: hidden;
+
+    @include breakpoint(lg) {
+        margin-left: 15px;
+        max-width: 200px;
+        font-weight: 600;
+        font-size: 14px;
+        text-align: left;
+    }
+}
+
+.item__action {
+    margin-top: 10px;
+
+    @include breakpoint(lg) {
+        text-align: right;
+    }
+
+    @include breakpoint(xl) {
+        margin: 0;
+        display: flex;
+    }
+}
+
+.action-btn {
+    width: 41px;
+    height: 41px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.fast-order {
+    background: #222222;
+
+    @include breakpoint(xl) {
+        margin-right: 5px;
+    }
+}
+
+.add-to-cart {
+    background: $green;
+}
+
+.custom-pagination {
+    all: unset;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint(lg) {
+        display: none;
+    }
+}
+
+.custom-pagination .swiper-pagination-bullet {
+    width: 25%;
+    height: 3px;
+    border-radius: 0;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+    background: $green;
+}

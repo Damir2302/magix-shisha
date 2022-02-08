@@ -1,0 +1,103 @@
+---
+title: Magix Shisha | Корзина
+---
+
+extends includes/_page
+
+block main
+
+    .cart-page
+
+        .container
+
+            include components/_breadcrumbs
+            +breadcrumbs('Корзина')
+
+            h1.page__title Корзина
+
+            .cart__wrapper
+
+                .cart__products
+
+                    .cart__item
+
+                        .cart__item-img
+                            img(src="assets/images/item.jpg", alt="img")
+
+                        .cart__item-info
+
+                            .cart__item-desc
+                                span Amy 7 Star 056 S Mini Black 55 см
+                                div
+                                    span.c-small-text Нержавеющая сталь, Алюминий
+                                    span.c-small-text Amy Deluxe
+
+                            .cart__item-wrap
+
+                                .cart__item-price
+                                    span.c-small-text Цена
+                                    div
+                                        span 3 700 ₽
+
+                                .cart__item-quantity
+                                    span.c-small-text Кол-во
+                                    div
+                                        button −
+                                        input(placeholde="0" min="1" value="1")
+                                        button +
+
+                                .cart__item-price-total
+                                    span.c-small-text Сумма
+                                    div
+                                        span 3 700 ₽
+
+                            .cart__item-remove
+                                span.c-small-text
+                                    i.fal.fa-trash-alt
+                                    span.remove-item Удалить
+
+                    .cart__item
+
+                        .cart__item-img
+                            img(src="assets/images/item-1.png", alt="img")
+
+                        .cart__item-info
+
+                            .cart__item-desc
+                                span Кальян Pizduk Hookah — 20см (Комплект)
+                                div
+                                    span.c-small-text Нержавеющая сталь, Алюминий
+                                    span.c-small-text Pizduk Hookah
+
+                            .cart__item-wrap
+
+                                .cart__item-price
+                                    span.c-small-text Цена
+                                    div
+                                        span 2 900 ₽
+
+                                .cart__item-quantity
+                                    span.c-small-text Кол-во
+                                    div
+                                        button −
+                                        input(placeholde="0" min="1" value="1")
+                                        button +
+
+                                .cart__item-price-total
+                                    span.c-small-text Сумма
+                                    div
+                                        span 2 900 ₽
+
+                            .cart__item-remove
+                                span.c-small-text
+                                    i.fal.fa-trash-alt
+                                    span.remove-item Удалить
+
+                .cart__action
+
+                    span.c-small-text Итого без учета доставки
+                    span.cart__total-price 6 600 ₽
+                    button#cartBtn.cart-button.button-style Оформить заказ
+
+            .promo-bottom
+                p <b>Внимание</b>, мы не продаем табачные изделия лицам младше 18 лет!

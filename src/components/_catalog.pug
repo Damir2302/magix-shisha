@@ -1,0 +1,21 @@
+mixin item(url, title, price, oldprice, customClass)
+
+    .item__block(class= customClass ? customClass : '')
+        button#add-to-favorite.add-to-favorite
+            i.far.fa-heart
+
+        .item__image(style="background-image: url(assets/images/" + url + ")")
+
+        .item__desc
+            .item__price
+                span.item__price-new= price + ' ₽'
+                span.item__price-old= oldprice + ' ₽'
+
+            .item__wrap
+                .item__title= title
+
+                .item__action
+                    button#fast-order.fast-order.action-btn
+                        i.far.fa-wallet
+                    button#add-to-cart.add-to-cart.action-btn
+                        i.far.fa-cart-arrow-down

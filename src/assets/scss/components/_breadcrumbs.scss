@@ -1,0 +1,35 @@
+.breadcrumbs {
+    display: none;
+
+    @include breakpoint(sm) {
+        padding: 18px 0 20px;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.breadcrumbs-item {
+    color: #888888;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 28.44px;
+    cursor: default;
+}
+
+a.breadcrumbs-item {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.breadcrumbs-separator {
+    color: #888888;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 28.44px;
+    margin-left: 5px;
+    margin-right: 5px;
+}

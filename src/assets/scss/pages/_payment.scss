@@ -1,0 +1,84 @@
+// Payment page Styles
+
+.page__payment {
+    padding-bottom: 72px;
+}
+.page__payment  .container {
+    display: flex;
+    flex-direction: column;
+}
+.page__payment-wrapper {
+    display: flex;
+    flex-direction: row;
+
+
+    @include breakpointMax(lg) {
+        flex-direction: column;
+    }
+}
+.page__payment-img {
+    max-width: 744px;
+    max-height: 460px;
+
+    @include breakpointMax(lg) {
+        max-width: unset;
+        max-height: unset;
+        height: auto;
+        width: 100%;
+    }
+}
+
+.page__payment-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page__payment-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 65px;
+    max-width: 40%;
+
+    @include breakpointMax(lg) {
+        max-width: unset;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+}
+
+.page__payment-content p {
+    color: #888888;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 27px;
+    text-align: left;
+    margin-bottom: 40px;
+
+    @include breakpointMax(lg) {
+        margin-bottom: 20px;
+    }
+
+}
+
+.page__payment .content__list p {
+    margin-bottom: 0;
+}
+
+
+.page__payment-content p:last-child {
+    margin-bottom: 0;
+}
+
+.page__payment .btn__back {
+    margin-top: 48px;
+
+    @include breakpointMax(sm) {
+        margin-top: 35px;
+    }
+
+}

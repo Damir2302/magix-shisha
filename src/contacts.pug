@@ -1,0 +1,40 @@
+---
+title: Magix Shisha | Контакты
+---
+
+extends includes/_page
+
+block main
+
+    .container
+        include components/_breadcrumbs
+        +breadcrumbs('Контакты')
+
+        h1.page__title Контакты
+
+    .page__contacts
+        .container
+            .page__contacts-wrapper
+                #contacts__map.page__contacts-map(style='width: 744px; height: 449px;')
+
+                .page__contacts-content
+                    .content__title--strong Наш магазин находится по адресу
+                    .contacts__page-pretitle Россия, Москва, Большая Юшуньская 1Ак4
+
+                    .contacts__page-list
+                        .contacts__page-list-title Телефон:
+                        a.contacts__page-link(href='tel:+7 926 263 02 69') +7 (926) 263-02-69
+                        a.contacts__page-link(href='tel:+79683952321') +7 (968) 395-23-21
+
+                    .contacts__page-list
+                        .contacts__page-list-title E-mail:
+                        a.contacts__page-link.contacts__page-link--mail(href='mailto:info@magixkalyan.ru') info@magixkalyan.ru
+
+                    .contacts__page-list
+                        .contacts__page-list-title E-mail:
+                        .contacts__page-list-text Ежедневно: с 09:00 до 21:00
+                        .contacts__page-list-text Воскресенье: с 09:00 до 20:00
+
+            a.btn__back(href='')
+                i.fas.fa-redo
+                |  Вернуться назад

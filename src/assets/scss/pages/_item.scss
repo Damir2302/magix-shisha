@@ -1,0 +1,432 @@
+.product__main {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include breakpoint(md) {
+        flex-direction: row;
+    }
+}
+
+.product__images {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 35px 20px 30px;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    box-sizing: content-box;
+
+    @include breakpoint(md) {
+        margin: 0;
+        width: 45%;
+    }
+}
+
+.sale-badge {
+    padding: 0 9px;
+    position: absolute;
+    left: 40px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 21px;
+    color: #ff0000;
+    text-transform: uppercase;
+    border: 1px solid red;
+    cursor: default;
+    user-select: none;
+}
+
+.favorite-icon {
+    margin-left: auto;
+    margin-right: 15px;
+    background: none;
+    display: block;
+    font-size: 24px;
+    color: #dcdfe6;
+}
+
+.product__block {
+    position: relative;
+}
+
+.swiper-item-pagination {
+    overflow: visible;
+}
+
+.swiper-item-pagination .swiper-slide::after {
+    content: '';
+    background: $green;
+    position: absolute;
+    left: 10px;
+    bottom: -28px;
+    display: block;
+    width: 0;
+    height: 2px;
+    transition: all .3s ease;
+}
+
+.swiper-item-pagination .swiper-slide-thumb-active::after {
+    width: calc(100% - 20px);
+}
+
+.product__block > a {
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.swiper-item-pagination {
+    margin-top: 50px;
+}
+
+.product__description {
+    margin-top: 30px;
+    position: relative;
+
+    @include breakpoint(md) {
+        margin: 0;
+        padding-left: 15px;
+        width: 49%;
+    }
+
+    @include breakpoint(lg) {
+        padding: 0;
+    }
+}
+
+.product__title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+
+    @include breakpoint(lg) {
+        font-size: 30px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 34px;
+    }
+}
+
+.product__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include breakpoint(sm) {
+        flex-direction: row;
+    }
+}
+
+.product__info-text {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    max-width: 240px;
+    color: #888888;
+
+    @include breakpoint(md) {
+        max-width: unset;
+    }
+
+    @include breakpoint(lg) {
+        margin: 20px 0;
+    }
+
+    @include breakpoint(xl) {
+        margin: 50px 0;
+    }
+}
+
+.product__info-text > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.product__info-desc {
+    width: 100%;
+
+    @include breakpoint(md) {
+        width: unset;
+    }
+}
+
+.product__title-primary {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+
+    @include breakpoint(md) {
+        margin-top: 0;
+    }
+
+    @include breakpoint(lg) {
+        margin-bottom: 20px;
+    }
+
+    @include breakpoint(xl) {
+        margin-bottom: 40px;
+    }
+}
+
+.product__title-secondary {
+    font-weight: 600;
+}
+
+.product__info-desc > ul {
+    margin: 10px 0;
+    color: #888888;
+
+    @include breakpoint(xl) {
+        margin: 20px 0;
+    }
+}
+
+.product__info-desc > ul > li::before {
+    content: '-';
+    display: inline-block;
+}
+
+.product__rating {
+    margin: 0 0 20px;
+    display: flex;
+    align-items: flex-end;
+
+    @include breakpoint(sm) {
+        margin: 20px 0;
+    }
+
+    @include breakpoint(xl) {
+        margin: 55px 0;
+    }
+}
+
+.product__rating > span {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.product__rating > a {
+    margin: 0 15px;
+    line-height: 23px;
+    color: #888888;
+    text-decoration: underline;
+}
+
+.product__rating .rating-stars {
+    font-size: 14px;
+    color: #ffc600;
+}
+
+.product__rating .rating-stars > i {
+    margin: 0 2px;
+}
+
+.product__price-before {
+    color: #888888;
+    text-decoration: line-through;
+
+    @include breakpoint(sm) {
+        position: absolute;
+        right: 0;
+        bottom: 150px;
+    }
+
+    @include breakpoint(md) {
+        position: initial;
+    }
+}
+
+.product__price {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 28px;
+
+    @include breakpoint(sm) {
+        position: absolute;
+        right: 0;
+        bottom: 120px;
+    }
+
+    @include breakpoint(md) {
+        position: initial;
+    }
+
+    @include breakpoint(lg) {
+        margin-top: 30px;
+        font-size: 38px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 46px;
+    }
+}
+
+.product__action {
+    margin-top: 20px;
+
+    @include breakpoint(sm) {
+        margin: 0;
+    }
+}
+
+.product__action > div {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(sm) {
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+    }
+
+    @include breakpoint(md) {
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.product__action button {
+    padding: 12px;
+    font-size: 12px;
+
+    @include breakpoint(lg) {
+        padding: 22px;
+        font-size: 13px;
+        letter-spacing: 1.4px;
+    }
+}
+
+.product__action button:last-child {
+    margin-top: 10px;
+
+    @include breakpoint(lg) {
+        margin-top: 20px;
+    }
+}
+
+.tab__section {
+    margin-top: 30px;
+    padding: 30px 15px 30px;
+    background: #fff;
+
+    @include breakpoint(xs) {
+        padding: 30px 30px 60px;
+    }
+
+    @include breakpoint(lg) {
+        margin-top: 60px;
+    }
+}
+
+.tab__panel {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include breakpoint(sm) {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.tab__label {
+    position: relative;
+    cursor: pointer;
+}
+
+.tab__label.active {
+    cursor: default;
+}
+
+.tab__label::before {
+
+    @include breakpoint(sm) {
+        content: '';
+        background: #f3f3f3;
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        display: block;
+        width: 100%;
+        height: 2px;
+    }
+}
+
+.tab__label::after {
+
+    @include breakpoint(sm) {
+        content: '';
+        background: $green;
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        display: block;
+        width: 0%;
+        height: 2px;
+        transition: all .3s ease;
+    }
+}
+
+.tab__label.active::after {
+    width: 100%;
+}
+
+.product__param {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.product__rating-tab {
+    line-height: 30px;
+
+    @include breakpoint(sm) {
+        margin-left: 60px;
+    }
+}
+
+.tab__block {
+    margin-top: 35px;
+}
+
+.tab__content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+.tab__content > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab__content > div > span {
+    display: inline-block;
+    width: 100%;
+    line-height: 32px;
+    color: #888888;
+}
+
+.param-color {
+    display: flex;
+    align-items: center;
+    height: 32px;
+}
+
+.param-color > span {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+}
+
+.catalog-item-section {
+    padding-top: 50px;
+}

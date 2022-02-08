@@ -1,0 +1,35 @@
+---
+title: Magix Shisha | Оплата
+---
+
+extends includes/_page
+
+block main
+
+    .container
+
+        include components/_breadcrumbs
+        +breadcrumbs('Оплата')
+
+        h1.page__title Оплата
+
+    .page__payment
+        .container
+            .page__payment-wrapper
+
+                .page__payment-img
+                    img(src='/assets/images/payment.png' alt='')
+
+                .page__payment-content
+                    .content__title НАШЕМ МАГАЗИНЕ ВОЗМОЖНЫ СЛЕДУЮЩИЕ ВАРИАНТЫ ОПЛАТЫ ТОВАРА:
+                    .content__list
+                        p - наличный расчет
+                        p - банковский блиц-перевод с карты на карту (Сбербанк)
+                    .content--strong Наличный расчет:
+                    p Оплата осуществляется наличными курьеру при получении заказа (только для Москвы и Московской области).
+                    .content--strong Банковский блиц-перевод с карты на карту:
+                    p Вы можете оплатить свой заказ блиц-переводом с карты на карту через любое отделение банка (реквизиты нашей карты предоставляются после оформления заказа).
+
+            a.btn__back(href='')
+                i.fas.fa-redo
+                |  Вернуться назад

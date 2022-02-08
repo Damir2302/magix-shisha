@@ -1,0 +1,29 @@
+.popup-layer
+.popup-container
+    .popup
+        .popup-wrapper
+            a.popup-close
+                i.fal.fa-times
+            .popup-header
+                p Нужна помощь в выборе?
+                span Наши эксперты с удовольствием ответят на все вопросы и помогут подобрать товары под вас индивидуально
+            .popup-form
+                form#form-popup
+                    .form-col-row
+                        label(for="name") Имя*
+                        input#name(type="text" name="name" placeholder="Представьтесь, как Вас зовут?" required)
+                    .form-col-row
+                        label(for="phone") Телефон*
+                        input#phone(type="text" name="phone" placeholder="В любом формате" required)
+                    button#submit(type="submit") Отправить запрос
+            .popup-bottom
+                span Даю согласие на обработку персональных данных и соглашаетесь с <a href="/privacy-policy/">политикой конфинденциальности</a>
+
+    .popup.popup-success.hide
+        .popup-wrapper
+            a.popup-close
+                i.fal.fa-times
+            p Спасибо
+            i.fal.fa-check-circle
+            span Ваши данные успешно отправлены, свяжемся с вами в ближайшее время
+            a.button-style Вернуться на сайт

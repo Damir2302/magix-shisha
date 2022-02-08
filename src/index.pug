@@ -1,0 +1,153 @@
+---
+title: Magix Shisha | Интернет магазин
+---
+
+extends includes/_page
+
+block main
+
+    // Swiper::Start
+    section.section-tiles.swiper.swiper-menu
+
+            .tiles__wrap.swiper-wrapper.container
+
+                .tile__item.swiper-slide
+                    a.tile__link(href="#")
+                        .bgwrap(style="background-image: url('assets/images/shisha.jpg')")
+                        .item-title Кальяны
+                .tile__item.swiper-slide
+                    a.tile__link(href="#")
+                        .bgwrap(style="background-image: url('assets/images/komplect.jpg')")
+                        .item-title Акссесуары и комплектующие
+                .tile__item.swiper-slide
+                    a.tile__link(href="#")
+                        .bgwrap(style="background-image: url('assets/images/smesi.jpg')")
+                        .item-title Смеси
+                .tile__item.swiper-slide
+                    a.tile__link(href="#")
+                        .bgwrap(style="background-image: url('assets/images/ugol.jpg')")
+                        .item-title Уголь
+                .tile__item.swiper-slide
+                    a.tile__link(href="#")
+                        .bgwrap(style="background-image: url('assets/images/kolbi.jpg')")
+                        .item-title Колбы
+                .tile__item.swiper-slide
+                    a.tile__link(href="#")
+                        .bgwrap(style="background-image: url('assets/images/shahti.jpg')")
+                        .item-title Шахты
+                .tile__item.swiper-slide
+                    a.tile__link(href="#")
+                        .bgwrap(style="background-image: url('assets/images/blog.jpg')")
+                        .item-title Блог
+    // Swiper::End
+
+    // Promo-items::Start
+    section.section-promotional
+        .container
+            span.section-suptitle Выгодные предложения
+            .promo-title
+                h2.section-title Акционные товары
+                .cat-items__pagination
+                    .swiper-btn
+                        .swiper-button-prev.swiper-button
+                        .swiper-button-next.swiper-button
+                    .slides-number
+                        <span class="current-number"></span>
+                        <span class="s-progress"><span></span></span>
+                        <span class="last-number"></span>
+
+            .cat-items.swiper.swiper-cat
+
+                .cat-items__container.swiper-wrapper
+                    include components/_catalog
+                    +item("item-1.png", "Кальян MEXANIKA SMOKE PAROVOZ", '5 500', '6 500', "swiper-slide")
+                    +item("item-2.png", "Кальян MINI BOX CUBE (TRANSPARENT)", '650', '1 500', "swiper-slide")
+                    +item("item-3.png", "ЧАШКА SMOKEMORE САМБА(COLOR)", '350', '500', "swiper-slide")
+                    +item("item-4.png", "ПЛИТА ДЛЯ РОЗЖИГА INFERNO", '1 750', '1 900', "swiper-slide")
+                    +item("item-5.png", "ЩИПЦЫ HOOKAH STAR ИДРА", '350', '400', "swiper-slide")
+                    +item("item-6.png", "ЧАШКА MOON PHUNNEL (COLOR)", '550', '600', "swiper-slide")
+                    +item("item-1.png", "Кальян MEXANIKA SMOKE PAROVOZ", '5 500', '6 500', "swiper-slide")
+                    +item("item-2.png", "Кальян MINI BOX CUBE (TRANSPARENT)", '650', '1 500', "swiper-slide")
+                    +item("item-3.png", "ЧАШКА SMOKEMORE САМБА(COLOR)", '350', '500', "swiper-slide")
+                    +item("item-4.png", "ПЛИТА ДЛЯ РОЗЖИГА INFERNO", '1 750', '1 900', "swiper-slide")
+                    +item("item-5.png", "ЩИПЦЫ HOOKAH STAR ИДРА", '350', '400', "swiper-slide")
+                    +item("item-6.png", "ЧАШКА MOON PHUNNEL (COLOR)", '550', '600', "swiper-slide")
+                    +item("item-3.png", "ЧАШКА SMOKEMORE САМБА(COLOR)", '350', '500', "swiper-slide")
+                    +item("item-4.png", "ПЛИТА ДЛЯ РОЗЖИГА INFERNO", '1 750', '1 900', "swiper-slide")
+                    +item("item-5.png", "ЩИПЦЫ HOOKAH STAR ИДРА", '350', '400', "swiper-slide")
+                    +item("item-6.png", "ЧАШКА MOON PHUNNEL (COLOR)", '550', '600', "swiper-slide")
+
+                .custom-pagination.swiper-pagination
+
+            .promo-bottom
+                p <b>Внимание</b>, мы не продаем табачные изделия лицам младше 18 лет!
+                a.link-router(href="#")  Перейти в каталог
+    // Promo-items::End
+
+    // About::Start
+    section.section-about
+        .container
+
+            .about__wrapper
+
+                .about__block
+
+                    span.section-suptitle О компании magix shisha
+                    h2.section-title О нас
+
+                    .about__content
+                        p <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</b>
+                        p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        a.link-router(href="#")  Подробнее о компании
+
+                .about__block.bg-image-block
+
+                    .about__qualities
+
+                        .qualities-col
+                            div
+                                i.fal.fa-thumbs-up
+                                span Гарантия качества
+
+                            div
+                                i.fal.fa-wallet
+                                span Доступные цены
+
+                        .qualities-col
+                            div
+                                i.fal.fa-hands-heart
+                                span С заботой о клиенте
+
+                            div
+                                i.fal.fa-users-medical
+                                span Более 100 вкусов
+    // About::End
+
+    // Advance::Start
+    section.section-advance
+        .container
+
+            .advance__blocks
+                .advance__block-item
+                    img(src="assets/images/smesi_banner.jpg" alt="img")
+                .advance__block-item
+                    img(src="assets/images/smesi_banner02.jpg" alt="img")
+                .advance__block-item
+                    img(src="assets/images/smesi_banner3.jpg" alt="img")
+                .advance__block-item
+                    img(src="assets/images/smesi_banner4.jpg" alt="img")
+                .advance__block-item
+                    img(src="assets/images/smesi_banner5.jpg" alt="img")
+
+            span.section-suptitle Надзаголовок
+            h2.section-title Текст для продвижения
+
+            .advance__wrapper
+                .advance-col
+                    span <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</b>
+                    p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantiumodit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+
+                .advance-col
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+    // Advance::End

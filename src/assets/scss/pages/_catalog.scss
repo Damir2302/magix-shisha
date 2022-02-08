@@ -1,0 +1,558 @@
+body.menu-layer {
+    overflow: hidden;
+}
+
+.content-text {
+    margin: 0 0 30px;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 21px;
+    color: #888888;
+}
+
+.catalog__wrapper {
+    display: flex;
+    align-items: flex-start;
+    color: #414548;
+}
+
+.aside-menu-layer {
+    background: #3a3f44;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s ease-in-out;
+}
+
+.aside-menu-layer.active {
+    opacity: 0.7;
+    z-index: 10;
+}
+
+.aside__block {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: -110%;
+    width: 100%;
+    height: 100%;
+    max-width: 320px;
+    box-shadow: 3px 0 10px 0 rgba(0, 0, 0, 0.45);
+    transition: all .5s ease-in-out;
+    z-index: 99;
+
+    @include breakpoint(lg) {
+        background: initial;
+        position: initial;
+        width: 30%;
+        height: unset;
+        max-width: unset;
+        overflow-y: unset;
+        box-shadow: unset;
+        z-index: unset;
+    }
+
+    @include breakpoint(xl) {
+        width: 25%;
+    }
+}
+
+.aside__block.opened {
+    left: 0;
+}
+
+.aside__head {
+    background: #fff;
+    width: 320px;
+    height: 45px;
+    text-align: right;
+    z-index: 1;
+
+    @include breakpoint(lg) {
+        display: none;
+    }
+}
+
+.aside__head i {
+    margin-top: 15px;
+    margin-right: 15px;
+    display: inline-block;
+    font-size: 24px;
+}
+
+.aside__inner {
+    padding: 0 20px;
+    background: #fff;
+    height: calc(100% - 155px);
+    overflow-y: scroll;
+
+    @include breakpoint(lg) {
+        height: initial;
+        overflow-y: initial;
+    }
+}
+
+.aside__inner::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.aside__inner::-webkit-scrollbar-thumb {
+    background: rgb(229, 229, 229);
+}
+
+.aside__inner::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.aside__filter {
+    padding: 25px 0;
+    border-bottom: 1px solid #f3f3f3;
+    cursor: pointer;
+}
+
+.aside__filter:last-of-type {
+    border: 0;
+}
+
+.filter__title {
+    position: relative;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 21px;
+    color: #414548;
+    text-transform: uppercase;
+
+    @include breakpoint(lg) {
+        font-size: 14px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 16px;
+    }
+}
+
+.filter__title::after {
+    content: "\f078";
+    position: absolute;
+    right: 0;
+    font-family: $icon;
+    font-weight: 400;
+    transition: transform .4s ease;
+}
+
+.aside__filter.opened .filter__title::after {
+    transform: rotate(180deg);
+}
+
+.filter__subcat {
+    margin-top: 25px;
+    padding-left: 15px;
+    display: none;
+}
+
+.filter__subcat-item a {
+    line-height: 30px;
+}
+
+///////////////////
+/// FILTER PRICE
+//////////////////
+
+.filter__price {
+    margin-top: 25px;
+    display: none;
+}
+
+.filter__price .ui-slider-horizontal {
+    margin: 0 10px;
+    background: grey;
+    height: 2px;
+    border: 0;
+}
+
+.filter__price .ui-slider-range {
+    background: $green;
+}
+
+.filter__price .ui-slider-handle {
+    background: $green;
+    width: 12px;
+    height: 12px;
+    font-size: 14px;
+    border-radius: 50%;
+}
+
+.filter__price .slider-results {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-checkbox {
+    position: relative;
+}
+
+.filter-checkbox::before {
+    content: '';
+    margin-right: 15px;
+    background: #f3f3f3;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+.filter-checkbox input {
+    display: none;
+}
+
+.filter-label {
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.filter__checkbox {
+    margin-top: 25px;
+    display: none;
+}
+
+.filter-show-more {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.filter-show-more a {
+    display: inline-block;
+    border-bottom: 1px dotted #414548;
+}
+
+.filter__color {
+    margin-top: 25px;
+    display: none;
+}
+
+.filter__color-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filter__color li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    height: 26px;
+}
+
+.filter__color input {
+    display: none;
+}
+
+.filter__color-item {
+    position: relative;
+}
+
+.filter-color-label {
+    display: inline-block;
+    height: 100%;
+}
+
+.filter-color {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #f3f3f3;
+    cursor: pointer;
+}
+
+.aside__action {
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 320px;
+    height: 130px;
+}
+
+.aside__btn-showmore {
+    margin: 20px 0 0;
+    padding: 20px 0;
+    width: 100%;
+    letter-spacing: 1.4px;
+
+    @include breakpoint(xl) {
+        padding: 20px 60px;
+    }
+
+    @include breakpoint(hd) {
+        padding: 22px 82px;
+    }
+}
+
+.aside__btn-reset {
+    margin: 10px auto 0;
+    padding-bottom: 15px;
+    background: none;
+    display: block;
+    font-size: 14px;
+    line-height: 30px;
+    color: #414548;
+}
+
+.aside__btn-reset > span {
+    margin-left: 10px;
+    border-bottom: 1px dotted #414548;
+}
+
+.catalog__block {
+    width: 100%;
+
+    @include breakpoint(lg) {
+        margin-left: 25px;
+        width: 75%;
+    }
+}
+
+.catalog__block .item__block {
+    width: 100%;
+    max-width: 470px;
+    max-height: unset;
+
+    @include breakpoint(sm) {
+        max-width: 262px;
+    }
+
+    @include breakpoint(md) {
+        flex: 1 1 30%;
+        max-width: unset;
+    }
+}
+
+.catalog__block .item__image {
+    height: 275px;
+}
+
+.catalog__filters {
+    margin-bottom: 20px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.mobile__filter-btn {
+    padding: 0 40px;
+    height: 100%;
+    font-weight: 500;
+
+    @include breakpoint(lg) {
+        display: none;
+    }
+}
+
+.sorting__filter {
+    background: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+
+    @include breakpoint(md) {
+        background: unset;
+        justify-content: unset;
+    }
+
+    @include breakpoint(lg) {
+        max-width: 388px;
+    }
+
+    @include breakpoint(xl) {
+        max-width: 450px;
+    }
+}
+
+.sorting-title {
+    display: none;
+
+    @include breakpoint(lg) {
+        padding: 0 20px;
+        display: block;
+        font-weight: 600;
+    }
+}
+
+.filter-select  {
+    background: #f8f8f8;
+    position: relative;
+    width: 100%;
+    max-width: 225px;
+
+    @include breakpoint(xl) {
+        max-width: 265px;
+    }
+}
+
+.filter-select::before {
+    content: "\f884";
+    font-family: $icon;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+.filter-select::after {
+    content: "\f078";
+    font-family: $icon;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+}
+
+.filter-select select {
+    padding: 0 50px;
+    background: transparent;
+    height: 60px;
+    font-size: 14px;
+    line-height: 21px;
+    border: none;
+}
+
+.items-quantity {
+    display: none;
+
+    @include breakpoint(lg) {
+        margin-left: auto;
+        padding: 0 25px;
+        display: block;
+        font-weight: 600;
+    }
+}
+
+.columns__filter {
+    display: none;
+
+    @include breakpoint(md) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.columns__filter-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-width: 78px;
+
+    @include breakpoint(xl) {
+        min-width: 90px;
+    }
+}
+
+.columns__filter-inner:first-child {
+    display: none;
+
+    @include breakpoint(lg) {
+        background: #f8f8f8;
+        display: block;
+    }
+}
+
+.columns__filter-inner:first-child::after {
+    content: "\f078";
+    font-family: $icon;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    z-index: 0;
+}
+
+.columns__filter-inner:last-child {
+    justify-content: center;
+}
+
+.columns__filter-inner select {
+    padding: 0 20px;
+    background: transparent;
+    height: 60px;
+    font-size: 14px;
+    line-height: 21px;
+    border: none;
+    z-index: 1;
+}
+
+.columns_2 {
+    margin-right: 20px;
+}
+
+.catalog__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    @include breakpoint(md) {
+        justify-content: unset;
+    }
+}
+
+.catalog__pagination {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+
+    @include breakpoint(xl) {
+        flex-wrap: unset;
+    }
+}
+
+.catalog__pagination .page__pagination {
+    margin: 0;
+
+    @include breakpoint(lg) {
+        flex: unset;
+        width: unset;
+    }
+
+    @include breakpoint(xl) {
+        flex: 1 0 30%;
+        width: 30%;
+    }
+}
+
+.catalog__pagination .promo-bottom {
+    margin: 0;
+    align-items: center;
+    flex: 1 0 30%;
+    width: 30%;
+}
+
+.show-more {
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 30%;
+    width: 100%;
+    max-width: 320px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include breakpoint(md) {
+        margin: 0;
+        padding: 0;
+        width: 30%;
+        max-width: unset;
+    }
+}

@@ -1,0 +1,51 @@
+---
+title: Magix Shisha | Для оптовиков
+---
+
+extends includes/_page
+
+block main
+
+    .container
+
+        include components/_breadcrumbs
+        +breadcrumbs('Для оптовиков')
+
+        h1.page__title Для оптовиков
+
+    .page__wholesalers
+        .container
+            .page__wholesalers-top
+                .wholesalers__form-wrapper(style='background-image: url(/assets/images/wholesalers.jpg);')
+                    form.wholesalers__form(action='')
+                        label(for='')
+                            | Имя*
+                            input(type='text' placeholder='Представьтесь, как вас зовут?' name='' id='')
+                        label(for='')
+                            | Телефон*
+                            input(type='text' placeholder='В любом формате' name='' id='')
+                        label(for='')
+                            | E-mail*
+                            input(type='text' placeholder='E-mail для контактов' name='' id='')
+                        button(type='submit')
+                            span.wholesalers__form-icon
+                                img(src='/assets/images/arrow-to-bottom.png' alt='')
+                                | Получить оптовый прайс
+                        label.wholesalers__radio-label
+                            input(type='checkbox' name='' value='yes')
+                            span.checkbox-button__control
+                            span.wholesalers__radio-label-text Даю согласие на обработку персональных данных
+                                br
+                                | и соглашаетесь c <a href="#">политикой конфиденциальности</a>
+
+                .wholesalers__content
+                    .content__title--strong Если вы ищите компанию,   занимающуюся оптовыми поставками, то Вы пришли в нужное место.
+                    p.content-paragraph У нас представлен широчайший выбор кальянной продукции собственного и стороннего производства.  Вы сможете подобрать интересующий Вас товар действительно по очень привлекательным ценам. Мы уже занимаемся поставками нашей продукции во многие розничные точки продаж и в кальянные заведения высочайшего уровня.
+                    p.content-paragraph Мы открыты к диалогу и готовы выслушать Ваши предложения.
+                    p.content-paragraph Для получения более полной и детальной информации  свяжитесь с нами по <a href='mailto:info@magixshisha.ru'>info@magixshisha.ru</a>
+                    p.content-paragraph
+                        strong Для регистрации в качестве оптового клиента укажите свои контактные данные максимально  полно, насколько это возможно, обязательно сообщите свой номер телефона, e-mail, свое полное имя.
+
+            a.btn__back(href='')
+                i.fas.fa-redo
+                |  Вернуться назад

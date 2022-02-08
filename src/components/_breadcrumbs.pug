@@ -1,0 +1,14 @@
+mixin breadcrumbs(...items)
+
+    .breadcrumbs
+        a.breadcrumbs-item(href='/') Главная
+        span.breadcrumbs-separator /
+
+        each item, index in items
+
+            if index == items.length - 1
+                .breadcrumbs-item= item
+
+            else
+                a.breadcrumbs-item(href='#')= item
+                span.breadcrumbs-separator /

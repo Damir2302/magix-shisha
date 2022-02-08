@@ -1,0 +1,239 @@
+---
+title: Magix Shisha | Карточка товара
+---
+
+extends includes/_page
+
+block main
+
+    .container
+
+        include components/_breadcrumbs
+        +breadcrumbs('Кальяны', 'Кальяны 7 Star', 'Amy 7 Star 056 S Mini Black 55 см')
+
+        .product__main
+
+            .product__images
+
+                span.sale-badge Sale
+
+                button#add-to-favorite.favorite-icon(title="Добавить в избранное")
+                    i.far.fa-heart
+
+                .swiper.swiper-item
+
+                    .product__container.swiper-wrapper
+
+                        .product__block.swiper-slide
+                            a
+                                img(src="assets/images/item.jpg", alt="img")
+
+                        .product__block.swiper-slide
+                            a
+                                img(src="assets/images/item-1.png", alt="img")
+
+                        .product__block.swiper-slide
+                            a
+                                img(src="assets/images/item.jpg", alt="img")
+
+                        .product__block.swiper-slide
+                            a
+                                img(src="assets/images/item-1.png", alt="img")
+
+                        .product__block.swiper-slide
+                            a
+                                img(src="assets/images/item-1.png", alt="img")
+
+
+                .swiper.swiper-item-pagination
+
+                    .product__container.swiper-wrapper
+
+                        .product__block.swiper-slide
+                            a
+                                img(src="assets/images/item.jpg", alt="img")
+
+                        .product__block.swiper-slide
+                            a
+                                img(src="assets/images/item-1.png", alt="img")
+
+                        .product__block.swiper-slide
+                            a
+                                img(src="assets/images/item.jpg", alt="img")
+
+                        .product__block.swiper-slide
+                            a
+                                img(src="assets/images/item-1.png", alt="img")
+
+                        .product__block.swiper-slide
+                            a
+                                img(src="assets/images/item-1.png", alt="img")
+
+
+            .product__description
+
+                h1.product__title Amy 7 Star 056 S Mini Black 55 см
+
+                .product__wrapper
+
+                    .product__info
+
+                        .product__info-text
+                            div
+                                span Артикул
+                                span Производитель
+                            div
+                                span 719443132
+                                span Amy Deluxe
+
+                        .product__info-desc
+                            .product__info-title
+                                p.product__title-primary Описание товара
+                                span.product__title-secondary Комплектация:
+
+                            ul
+                                li Колба
+                                li Мундштук
+                                li Силиконовый шланг
+                                li Чашка
+                                li Шахта
+                                li Диффузор
+                                li Фирменная упаковка
+
+                            .product__rating
+                                span 5,0
+                                a(href="#") (25 отзывов)
+                                span.rating-stars
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+                                    i.fas.fa-star
+
+                            .product__price-before
+                                span 4 500 ₽
+
+                            .product__price
+                                span 3 700 ₽
+
+                    .product__action
+                        div
+                            button#addToCart.button-style Добавить в корзину
+                            button#fastOrder.invert-btn-style Купить в один клик
+
+        .promo-bottom
+            p <b>Внимание</b>, мы не продаем табачные изделия лицам младше 18 лет!
+
+        .tab__section
+
+            .tab__panel
+                .tab__label.product__param.active
+                    span Параметры
+
+                .tab__label.product__rating.product__rating-tab
+                    span 5,0
+                    a(href="#") (25 отзывов)
+                    span.rating-stars
+                        i.fas.fa-star
+                        i.fas.fa-star
+                        i.fas.fa-star
+                        i.fas.fa-star
+                        i.fas.fa-star
+
+            .tab__block
+
+                .tab__content
+                    div
+                        span Цвет:
+                        span.param-color
+                            span(style="background-color: #000")
+                    div
+                        span Высота:
+                        span 55 см
+                    div
+                        span Тип соединения:
+                        span Клик
+                    div
+                        span Материал шахты:
+                        span Нержавеющая сталь, Алюминий
+
+        // Slider-section::Start
+        section.catalog-item-section
+
+            span.section-suptitle Выгодные предложения
+            .promo-title
+                h2.section-title Акционные товары
+                .cat-items__pagination
+                    .swiper-btn
+                        .swiper-button-prev.swiper-button-prev-1.swiper-button
+                        .swiper-button-next.swiper-button-next-1.swiper-button
+                    .slides-number
+                        <span class="current-number num-current-1"></span>
+                        <span class="s-progress num-progress-1"><span></span></span>
+                        <span class="last-number num-last-1"></span>
+
+            .cat-items.swiper.swiper-offers-1
+
+                .cat-items__container.swiper-wrapper
+                    include components/_catalog
+                    +item("item-1.png", "Кальян MEXANIKA SMOKE PAROVOZ", '5 500', '6 500', "swiper-slide")
+                    +item("item-2.png", "Кальян MINI BOX CUBE (TRANSPARENT)", '650', '1 500', "swiper-slide")
+                    +item("item-3.png", "ЧАШКА SMOKEMORE САМБА(COLOR)", '350', '500', "swiper-slide")
+                    +item("item-4.png", "ПЛИТА ДЛЯ РОЗЖИГА INFERNO", '1 750', '1 900', "swiper-slide")
+                    +item("item-5.png", "ЩИПЦЫ HOOKAH STAR ИДРА", '350', '400', "swiper-slide")
+                    +item("item-6.png", "ЧАШКА MOON PHUNNEL (COLOR)", '550', '600', "swiper-slide")
+                    +item("item-1.png", "Кальян MEXANIKA SMOKE PAROVOZ", '5 500', '6 500', "swiper-slide")
+                    +item("item-2.png", "Кальян MINI BOX CUBE (TRANSPARENT)", '650', '1 500', "swiper-slide")
+                    +item("item-3.png", "ЧАШКА SMOKEMORE САМБА(COLOR)", '350', '500', "swiper-slide")
+                    +item("item-4.png", "ПЛИТА ДЛЯ РОЗЖИГА INFERNO", '1 750', '1 900', "swiper-slide")
+                    +item("item-5.png", "ЩИПЦЫ HOOKAH STAR ИДРА", '350', '400', "swiper-slide")
+                    +item("item-6.png", "ЧАШКА MOON PHUNNEL (COLOR)", '550', '600', "swiper-slide")
+
+                .custom-pagination.swiper-pagination
+        // Slider-section::End
+
+        // Slider-section::Start
+        section.catalog-item-section
+
+            span.section-suptitle Выгодные предложения
+            .promo-title
+                h2.section-title Акционные товары
+                .cat-items__pagination
+                    .swiper-btn
+                        .swiper-button-prev.swiper-button-prev-2.swiper-button
+                        .swiper-button-next.swiper-button-next-2.swiper-button
+                    .slides-number
+                        <span class="current-number num-current-2"></span>
+                        <span class="s-progress num-progress-2"><span></span></span>
+                        <span class="last-number num-last-2"></span>
+
+            .cat-items.swiper.swiper-offers-2
+
+                .cat-items__container.swiper-wrapper
+                    include components/_catalog
+                    +item("item-1.png", "Кальян MEXANIKA SMOKE PAROVOZ", '5 500', '6 500', "swiper-slide")
+                    +item("item-2.png", "Кальян MINI BOX CUBE (TRANSPARENT)", '650', '1 500', "swiper-slide")
+                    +item("item-3.png", "ЧАШКА SMOKEMORE САМБА(COLOR)", '350', '500', "swiper-slide")
+                    +item("item-4.png", "ПЛИТА ДЛЯ РОЗЖИГА INFERNO", '1 750', '1 900', "swiper-slide")
+                    +item("item-5.png", "ЩИПЦЫ HOOKAH STAR ИДРА", '350', '400', "swiper-slide")
+                    +item("item-6.png", "ЧАШКА MOON PHUNNEL (COLOR)", '550', '600', "swiper-slide")
+
+                .custom-pagination.swiper-pagination
+        // Slider-section::End
+
+        // Advance::Start
+        section.section-advance
+            .container
+
+                span.section-suptitle Надзаголовок
+                h2.section-title Текст для продвижения
+
+                .advance__wrapper
+                    .advance-col
+                        span <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</b>
+                        p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantiumodit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+
+                    .advance-col
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+        // Advance::End

@@ -1,0 +1,270 @@
+.cart-page {
+    padding-bottom: 100px;
+}
+
+.cart-page .promo-bottom {
+    margin-top: 30px;
+    justify-content: flex-end;
+
+    @include breakpoint(xl) {
+        justify-content: space-between;
+    }
+}
+
+.cart__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include breakpoint(xl) {
+        flex-direction: row;
+    }
+}
+
+.cart__products {
+    width: 100%;
+
+    @include breakpoint(xl) {
+        width: 75%;
+    }
+
+    @include breakpoint(hd) {
+        width: 70%;
+    }
+}
+
+.cart__item {
+    margin: 0 0 10px;
+    padding: 20px;
+    background: #fff;
+    display: flex;
+
+    @include breakpoint(md) {
+        flex-direction: row;
+    }
+}
+
+.cart__item-img {
+    margin-right: 10px;
+    max-width: 70px;
+
+    @include breakpoint(xs) {
+        margin: 0 auto;
+        max-width: 100px;
+    }
+
+    @include breakpoint(md) {
+        margin: 0;
+    }
+
+    @include breakpoint(lg) {
+        max-width: 150px;
+    }
+}
+
+.cart__item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+
+    @include breakpoint(md) {
+        padding-left: 20px;
+        flex-direction: row;
+    }
+}
+
+.cart__item-desc {
+    width: 100%;
+    max-width: 300px;
+
+    @include breakpoint(xl) {
+        max-width: 350px;
+    }
+}
+
+.cart__item-desc > span {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 21px;
+    text-transform: uppercase;
+
+    @include breakpoint(xs) {
+        line-height: 30px;
+    }
+
+    @include breakpoint(md) {
+        font-size: 14px;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 18px;
+    }
+}
+
+.cart__item-desc > div {
+    display: none;
+
+    @include breakpoint(xs) {
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    @include breakpoint(md) {
+        margin-top: 20px;
+        display: initial;
+    }
+
+    @include breakpoint(lg) {
+        margin-top: 40px;
+    }
+}
+
+.cart__item-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @include breakpoint(md) {
+        margin-left: 55px;
+    }
+
+    @include breakpoint(hd) {
+        margin-left: 80px;
+    }
+}
+
+.cart__item-wrap > div > div {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 27px;
+
+    @include breakpoint(md) {
+        margin-top: 20px;
+    }
+
+    @include breakpoint(lg) {
+        margin-top: 40px;
+        font-size: 24px;
+    }
+}
+
+.c-small-text {
+    display: block;
+    font-size: 14px;
+    line-height: 27px;
+    color: #888888;
+}
+
+
+.cart__item-quantity > div {
+    margin-top: -2px;
+    display: flex;
+    align-items: center;
+}
+
+.cart__item-quantity > div button {
+    padding: 0;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    font-weight: 500;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+.cart__item-quantity > div input {
+    margin-top: -1px;
+    background: none;
+    width: 25px;
+    height: 27px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: center;
+    border: 0;
+
+    @include breakpoint(lg) {
+        font-size: 24px;
+    }
+}
+
+.cart__item-remove {
+    margin-top: 15px;
+    margin-left: 75px;
+
+    @include breakpoint(md) {
+        margin-top: 0;
+    }
+}
+
+.cart__item-remove span {
+    cursor: pointer;
+}
+
+.cart__item-remove i {
+    display: none;
+
+    @include breakpoint(md) {
+        display: initial;
+    }
+}
+
+.cart__item-remove .remove-item {
+    display: block;
+    text-align: right;
+    text-decoration: underline;
+
+    @include breakpoint(md) {
+        display: none;
+    }
+}
+
+.cart__action {
+    margin-top: 30px;
+    margin-left: auto;
+    padding: 30px 35px 30px 45px;
+    background: #fff;
+    width: 100%;
+    max-width: 500px;
+
+    @include breakpoint(md) {
+        margin-top: 50px;
+    }
+
+    @include breakpoint(xl) {
+        margin-top: 0;
+        width: 22%;
+        max-width: unset;
+    }
+
+    @include breakpoint(hd) {
+        width: 25%;
+    }
+}
+
+.cart__total-price  {
+    margin: 30px 0;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 27px;
+
+    @include breakpoint(hd) {
+        font-size: 48px;
+    }
+}
+
+.cart-button {
+    padding: 20px 0;
+    width: 100%;
+
+    @include breakpoint(hd) {
+        letter-spacing: 1.4px;
+    }
+}

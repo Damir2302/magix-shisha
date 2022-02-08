@@ -1,0 +1,145 @@
+.blog__detail .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog__detail-header {
+    background-color: #f3f3f3;
+}
+
+.blog__detail-title {
+    max-width: 1060px;
+    color: #222222;
+    font-size: 36px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 40px;
+
+    @include breakpointMax(lg) {
+        margin-top: 30px;
+        margin-bottom: 25px;
+    }
+
+    @include breakpointMax(md) {
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+
+    @include breakpointMax(sm) {
+        font-size: 30px;
+    }
+
+}
+
+.blog__detail-img {
+    max-width: 1060px;
+    margin: 0 auto;
+    display: block;
+}
+
+.blog__detail-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog__detail-content {
+    background: #fff;
+    padding-top: 64px;
+    padding-bottom: 63px;
+
+
+    @include breakpointMax(lg) {
+        padding-top: 42px;
+        padding-bottom: 32px;
+    }
+
+    @include breakpointMax(sm) {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+}
+
+.blog__detail-content .container {
+    max-width: 762px;
+}
+
+.blog__detail-content-title {
+    color: #222222;
+    font-size: 24px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 30px;
+    text-align: left;
+    text-transform: uppercase;
+
+    @include breakpointMax(sm) {
+        font-size: 20px;
+    }
+}
+
+.blog__detail-content-date {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: $green;
+
+    @include breakpointMax(lg) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    @include breakpointMax(sm) {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+}
+
+.blog__detail-content-date i {
+    margin-right: 13px;
+}
+
+
+.blog__detail-content-text {
+    color: #888888;
+}
+
+.blog__detail-content-text p {
+    color: #888888;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 27px;
+    text-align: left;
+    margin-bottom: 30px;
+
+    @include breakpointMax(lg) {
+        margin-bottom: 20px;
+    }
+
+    @include breakpointMax(md) {
+        font-size: 14px;
+    }
+}
+
+.blog__detail-btn {
+    color: $green;
+    padding: 18px 50px 18px 16px;
+    box-sizing: border-box;
+    border: 1px solid $green;
+    width: fit-content;
+
+}
+
+.blog__detail-btn i {
+    margin-right: 20px;
+}

@@ -1,0 +1,106 @@
+// Return goods page styles
+
+.page__return-goods {
+    padding-bottom: 70px;
+}
+.page__return-goods .container {
+    display: flex;
+    flex-direction: column;
+}
+.page__return-goods-wrapper {
+    display: flex;
+    flex-direction: row;
+
+    @include breakpointMax(lg) {
+        flex-direction: column;
+    }
+}
+.page__return-goods-left {
+    display: flex;
+    flex-direction: column;
+}
+.page__return-goods-img {
+    width: 744px;
+    max-height: 539px;
+
+    @include breakpointMax(hd) {
+        max-width: 744px;
+        max-height: 539px;
+        width: unset;
+    }
+
+    @include breakpointMax(lg) {
+        width: 100%;
+        max-width: unset;
+        max-height: unset;
+    }
+
+}
+
+.page__return-goods-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page__return-goods-left-cont {
+    margin-top: 60px;
+    max-width: 637px;
+
+    @include breakpointMax(lg) {
+        max-width: 100%;
+        margin-top: 30px;
+    }
+
+    @include breakpointMax(sm) {
+        margin-top: 20px;
+    }
+}
+.content--strong {
+}
+.page__return-goods-left-cont .content__list {
+    margin-bottom: 30px;
+}
+.content-paragraph--black {
+}
+.page__return-goods-right {
+    width: 60%;
+    margin-left: 60px;
+
+    @include breakpointMax(lg) {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    @include breakpointMax(sm) {
+        margin-top: 20px;
+    }
+}
+
+.page__return-goods .content-paragraph {
+    color: #888888;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 27px;
+    text-align: left;
+    margin-bottom: 26px;
+
+    @include breakpointMax(sm) {
+        margin-bottom: 17px;
+    }
+}
+
+.content-paragraph strong {
+    color: #000;
+}
+
+.page__return-goods .btn__back {
+    margin-top: 60px;
+
+    @include breakpointMax(sm) {
+        margin-top: 35px;
+    }
+}
