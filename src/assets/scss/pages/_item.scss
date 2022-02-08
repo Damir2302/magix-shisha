@@ -71,9 +71,24 @@
     width: calc(100% - 20px);
 }
 
-.product__block > a {
+.swiper-item-pagination .product__block a {
+    height: 100px;
+}
+
+.swiper-item-pagination .product__block a img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.product__block a {
     margin: 0 auto;
     max-width: 500px;
+    text-align: center;
+}
+
+.product__block a img {
+    width: auto;
+    object-fit: cover;
 }
 
 .swiper-item-pagination {
