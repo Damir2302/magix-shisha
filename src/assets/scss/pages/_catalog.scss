@@ -333,7 +333,7 @@ body.menu-layer {
     }
 
     @include breakpoint(md) {
-        flex: 1 1 30%;
+        flex: 0 1 calc((100% - 40px) / 3);
         max-width: unset;
     }
 }

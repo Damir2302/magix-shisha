@@ -1,17 +1,20 @@
 $(document).ready(function() {
-    $("#priceSlider").slider({
-        animate: "slow",
-        range: true,
-        values: [ 0, 100 ],
-        slide : function(event, ui) {
-            $("#result-min").text(ui.values[ 0 ]);
-            $("#result-max").text(ui.values[ 1 ]);
-        }
-    });
+    let priceSlider = $("#priceSlider");
 
-    $( "#result-min" ).text($("#priceSlider").slider("values", 0));
-    $( "#result-max" ).text($("#priceSlider").slider("values", 1));
+    if (priceSlider.length > 0) {
+        $("#priceSlider").slider({
+            animate: "slow",
+            range: true,
+            values: [ 0, 100 ],
+            slide : function(event, ui) {
+                $("#result-min").text(ui.values[ 0 ]);
+                $("#result-max").text(ui.values[ 1 ]);
+            }
+        });
 
+        $( "#result-min" ).text($("#priceSlider").slider("values", 0));
+        $( "#result-max" ).text($("#priceSlider").slider("values", 1));
+    }
 
     $('.aside__filter').on('click', function() {
         $(this).find('ul[class^=filter__], .filter__price').slideToggle();
